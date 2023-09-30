@@ -14,7 +14,7 @@ public class CarsController {
     private final CarService carService;
 @Autowired
     public CarsController(CarService carService) {
-        this.carService = new CarServiceImpl();
+        this.carService = carService;
     }
 
     @GetMapping(value = "cars")
