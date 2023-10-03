@@ -1,4 +1,4 @@
-package ControllersAndServices.controllers;
+package web.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ControllersAndServices.service.CarService;
-import ControllersAndServices.service.CarServiceImpl;
+import web.service.CarService;
+
 @Controller
 public class CarsController {
     private final CarService carService;
