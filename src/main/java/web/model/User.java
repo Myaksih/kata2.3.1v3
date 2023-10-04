@@ -1,14 +1,27 @@
 package web.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class User {
+
+    @Id
     private int id;
     private String name;
-    private String age;
+    private int age;
 
-    public User(int id, String name, String age) {
+    public User(int id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public User() {
     }
 
     public int getId() {
@@ -27,11 +40,11 @@ public class User {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 }
