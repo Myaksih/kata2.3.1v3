@@ -56,13 +56,13 @@ public class UserController {
         return "users/edit";
     }
 
-    @PostMapping("/{id}")
+    @PatchMapping("/{id}")
     public String update(@ModelAttribute("user") User user, @PathVariable("id") int id){
         userDAO.update(id, user);
         return "redirect:/users";
     }
 
-    @PostMapping("/{id}")
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id){
         userDAO.delete(id);
         return "redirect:/users";
